@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Payment</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      padding: 36px 32px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .hotel-icon { font-size: 48px; margin-bottom: 8px; }
+    .hotel-name { font-size: 22px; font-weight: 700; color: #1a1a2e; margin-bottom: 4px; }
+    .hotel-sub { font-size: 13px; color: #888; margin-bottom: 28px; }
+    .divider { border: none; border-top: 1px solid #eee; margin: 0 0 24px; }
+    .order-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #aaa; margin-bottom: 6px; }
+    .order-item { font-size: 20px; font-weight: 600; color: #1a1a2e; margin-bottom: 16px; }
+
+    .amount-box {
+      background: #f0f4ff;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 28px;
+    }
+    .amount-label { font-size: 12px; color: #7b8ab8; margin-bottom: 4px; }
+    .amount-value { font-size: 36px; font-weight: 800; color: #3b3dbf; }
+
+    .pay-btn {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-bottom: 12px;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+    .pay-btn:active { transform: scale(0.98); opacity: 0.9; }
+
+    .btn-phonepe { background: #5f259f; color: #ffffff; }
+    .btn-gpay    { background: #1a73e8; color: #ffffff; }
+    .btn-upi     { background: #ff6600; color: #ffffff; }
+
+    .btn-icon { margin-right: 8px; font-size: 18px; }
+
+    .secure-note { font-size: 12px; color: #bbb; margin-top: 20px; }
+    .secure-note span { color: #4caf50; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="hotel-icon">🏨</div>
+    <div class="hotel-name">Satyabati Hotel</div>
+    <div class="hotel-sub">Room Service &amp; Dining</div>
+
+    <hr class="divider"/>
+
+    <div class="order-label">Your Order</div>
+    <div class="order-item">🥤 Soda Water</div>
+
+    <div class="amount-box">
+      <div class="amount-label">Amount to Pay</div>
+      <div class="amount-value">₹ 2.00</div>
+    </div>
+
+    <!-- PhonePe Button -->
+    <a class="pay-btn btn-phonepe"
+       href="upi://pay?pa=triparnatalukdar6@okhdfcbank&pn=Satyabati&am=2.00&cu=INR&tn=Sodawater">
+      💜 Pay with PhonePe
+    </a>
+
+    <!-- Google Pay Button -->
+    <a class="pay-btn btn-gpay"
+       href="upi://pay?pa=triparnatalukdar6@okhdfcbank&pn=Satyabati&am=2.00&cu=INR&tn=Sodawater">
+      🔵 Pay with Google Pay
+    </a>
+
+    <!-- Any UPI App Button -->
+    <a class="pay-btn btn-upi"
+       href="upi://pay?pa=triparnatalukdar6@okhdfcbank&pn=Satyabati&am=2.00&cu=INR&tn=Sodawater">
+      📱 Pay with Any UPI App
+    </a>
+
+    <div class="secure-note">🔒 <span>100% Secure</span> · UPI Powered Payment</div>
+  </div>
+
+</body>
+</html>
